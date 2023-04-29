@@ -8,16 +8,24 @@ from selenium.webdriver.chrome.options import Options
 
 
 urlResearchGroups = 'https://computacao.ufs.br/pagina/4656'
+urlTest = 'https://dayvidsantana.netlify.app/'
+classTest = 'txt-present'
+
 driver = webdriver.Chrome() 
 
+def takingData(url, classLookingFor):
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, 'html.parser')
+    data = soup.find('div', class_=classLookingFor)
+    return data
 
 
 
 def openPage(url):
     driver.get(url)
-    #lookingForData(url)
-    time.sleep(10)
+    text = takingData(url, classTest)
+    print(text)
     driver.quit()
 
 
-openPage(urlResearchGroups)
+openPage(urlTest)
