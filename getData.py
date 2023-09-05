@@ -8,8 +8,6 @@ import openpyxl
 driver = webdriver.Chrome()
 
 
-import openpyxl
-
 def createDatabase(filename, sheetname, headers, rows):
     wb = openpyxl.Workbook()
 
