@@ -1,5 +1,10 @@
 # ROOT-Webscraping
 Script para captura de dados usando Webscraping.
+<br><br>
+Para começar, instale:
+````bash
+pip install beautifulsoup4 selenium openpyxl requests
+````
 
 ## Como está organizado
 Todas as funções estão no arquivo no arquivo getData.py, elas são importadas para o arquivo principal (main.py) onde criamos testes e scripts  utilizando as funções importadas do getData.py. 
